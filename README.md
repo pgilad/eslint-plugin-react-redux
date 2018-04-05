@@ -43,8 +43,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
-- [use-selectors-on-state](docs/rules/use-selectors-on-state)
+- [use-selectors-on-state](docs/rules/use-selectors-on-state.md)
 
 ## License
 
