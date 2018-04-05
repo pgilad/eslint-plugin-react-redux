@@ -13,7 +13,7 @@ $ npm i eslint --save-dev
 Next, install `eslint-plugin-react-redux`:
 
 ```bash
-$ npm install eslint-plugin-react-redux --save-dev
+$ npm install @pgilad/eslint-plugin-react-redux --save-dev
 ```
 
 **Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-react-redux` globally.
