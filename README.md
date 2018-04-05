@@ -20,12 +20,12 @@ $ npm install eslint-plugin-react-redux --save-dev
 
 ## Usage
 
-Add `eslint-react-redux` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `react-redux` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
     "plugins": [
-        "eslint-react-redux"
+        "react-redux"
     ]
 }
 ```
@@ -36,7 +36,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "eslint-react-redux/rule-name": 2
+        "react-redux/rule-name": 2
     }
 }
 ```
@@ -49,3 +49,6 @@ Then configure the rules you want to use under the rules section.
 
 
 
+## License
+
+MIT
