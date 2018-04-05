@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-react-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find issues with react-redux code usages",
   "keywords": [
     "eslint",
