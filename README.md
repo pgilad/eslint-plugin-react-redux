@@ -6,13 +6,13 @@ Find issues with react-redux code usages
 
 You'll first need to install [ESLint](http://eslint.org):
 
-```
+```bash
 $ npm i eslint --save-dev
 ```
 
 Next, install `eslint-plugin-react-redux`:
 
-```
+```bash
 $ npm install eslint-plugin-react-redux --save-dev
 ```
 
@@ -44,10 +44,7 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * Fill in provided rules here
-
-
-
-
+- [use-selectors-on-state](docs/rules/use-selectors-on-state)
 
 ## License
 
