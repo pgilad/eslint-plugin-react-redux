@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-react-redux",
+  "version": "0.0.0",
+  "description": "Find issues with react-redux code usages",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "react-redux",
+    "mapStateToProps",
+    "selectors"
+  ],
+  "author": "Gilad Peleg",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~3.9.1",
+    "mocha": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}
