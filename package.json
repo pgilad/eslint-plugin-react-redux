@@ -10,8 +10,9 @@
     "mapStateToProps",
     "selectors"
   ],
-  "author": "Gilad Peleg",
+  "author": "Gilad Peleg <giladp007@gmail.com> (http://giladpeleg.com)",
   "main": "lib/index.js",
+  "repository": "pgilad/eslint-plugin-react-redux",
   "scripts": {
     "test": "mocha tests --recursive"
   },
