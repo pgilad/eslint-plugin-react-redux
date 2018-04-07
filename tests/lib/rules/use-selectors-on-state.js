@@ -2,26 +2,25 @@
  * @fileoverview Enforce usage of selector functions on state in mapStateToProps
  * @author Gilad Peleg
  */
-"use strict";
+'use strict';
 
-var rule = require("../../../lib/rules/use-selectors-on-state");
-var RuleTester = require("eslint").RuleTester;
+var rule = require('../../../lib/rules/use-selectors-on-state');
+var RuleTester = require('eslint').RuleTester;
 
 const parserOptions = {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
         experimentalObjectRestSpread: true,
-        jsx: true
-    }
+        jsx: true,
+    },
 };
 
-const ruleMessage = 'You should not access state directly in `mapStateToProps`. Use a selector function instead.'
-
 var ruleTester = new RuleTester({ parserOptions });
-ruleTester.run("use-selectors-on-state", rule, {
-    valid: [{
-        code: `
+ruleTester.run('use-selectors-on-state', rule, {
+    valid: [
+        {
+            code: `
             const mapStateToProps = state => {
                 const account = getAccountsEntity(state);
 
@@ -29,8 +28,8 @@ ruleTester.run("use-selectors-on-state", rule, {
                     account,
                 };
             };
-        `
-    },
+        `,
+        },
         {
             code: `
                 const mapStateToProps = state => {
@@ -54,7 +53,7 @@ ruleTester.run("use-selectors-on-state", rule, {
                     };
                 };
             `,
-            errors: [ { message: ruleMessage, }]
+            errors: [{ messageId: 'nonSelector', data: { usage: 'state.appState' } }],
         },
         {
             code: `
@@ -66,7 +65,7 @@ ruleTester.run("use-selectors-on-state", rule, {
                     };
                 };
             `,
-            errors: [ { message: ruleMessage, }]
+            errors: [{ messageId: 'nonSelector', data: { usage: '{ w, s } = state' } }],
         },
         {
             code: `
@@ -78,7 +77,7 @@ ruleTester.run("use-selectors-on-state", rule, {
                     };
                 };
             `,
-            errors: [ { message: ruleMessage, }]
+            errors: [{ messageId: 'nonSelector', data: { usage: 'state.outer' } }],
         },
         {
             code: `
@@ -91,7 +90,10 @@ ruleTester.run("use-selectors-on-state", rule, {
                     };
                 };
             `,
-            errors: [ { message: ruleMessage, }, { message: ruleMessage, }]
+            errors: [
+                { messageId: 'nonSelector', data: { usage: "state['a']" } },
+                { messageId: 'nonSelector', data: { usage: 'state[d]' } },
+            ],
         },
         {
             code: `
@@ -103,7 +105,7 @@ ruleTester.run("use-selectors-on-state", rule, {
                     };
                 };
             `,
-            errors: [ { message: ruleMessage, }]
+            errors: [{ messageId: 'nonSelector', data: { usage: 'state.inner' } }],
         },
-    ]
+    ],
 });

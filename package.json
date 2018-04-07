@@ -14,14 +14,16 @@
   "main": "lib/index.js",
   "repository": "pgilad/eslint-plugin-react-redux",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "prettier": "prettier --write '**/*.js'"
   },
   "dependencies": {
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "mocha": "^5.0.5"
+    "mocha": "^5.0.5",
+    "prettier": "^1.11.1"
   },
   "engines": {
     "node": ">=6.0.0"
