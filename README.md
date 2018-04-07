@@ -20,23 +20,22 @@ $ npm install @pgilad/eslint-plugin-react-redux --save-dev
 
 ## Usage
 
-Add `react-redux` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `react-redux` to the plugins section of your `.eslintrc` configuration file.
 
 ```json
 {
     "plugins": [
-        "react-redux"
+        "@pgilad/eslint-plugin-react-redux"
     ]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
     "rules": {
-        "react-redux/rule-name": 2
+        "@pgilad/react-redux/use-selectors-on-state": 1
     }
 }
 ```
