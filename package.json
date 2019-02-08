@@ -21,9 +21,9 @@
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "mocha": "^5.0.5",
-    "prettier": "^1.11.1"
+    "eslint": "^5.13.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.16.4"
   },
   "engines": {
     "node": ">=6.0.0"
