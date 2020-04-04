@@ -1,6 +1,6 @@
 {
   "name": "@pgilad/eslint-plugin-react-redux",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Find issues with react-redux code usages",
   "keywords": [
     "eslint",
